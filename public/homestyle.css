@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+}
+
+.title {
+    grid-area: 1 / 1 / span 1 / span 4;
+    text-align: center;
+}
+
+.header {
+    grid-area: 2 / 1 / span 1 / span 4;
+    text-align: center;
+}
+
+.quizform {
+    grid-area: 3 / 1 / span 1 / span 4;
+    text-align: center;
+}
+
+p {
+    border: 4px;
+    border-style: outset;
+    border-radius: 4px;
+    border-color: #325e2d;
+    background-color: #4cb9cd;
+    
+}
