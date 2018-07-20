@@ -17,9 +17,6 @@
 .quizform {
     grid-area: 3 / 1 / span 1 / span 4;
     text-align: center;
-}
-
-p {
     border: 4px;
     border-style: outset;
     border-radius: 4px;
@@ -27,3 +24,4 @@ p {
     background-color: #4cb9cd;
     
 }
+
