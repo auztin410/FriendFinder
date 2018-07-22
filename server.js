@@ -14,3 +14,6 @@ app.listen(PORT, function(){
     console.log("App listening on PORT: http://localhost:" + PORT);
 });
 
+app.post("/characters", function(req, res){
+
+})
