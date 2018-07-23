@@ -13,7 +13,38 @@ app.use(express.static('data'));
 
 var surveryResults = [];
 
-
+var characterSelect = [
+    {
+        name: "morty",
+        high: 34,
+        low: 30
+    },
+    {
+        name: "bird-person",
+        high: 29,
+        low: 26
+    },
+    {
+        name: "squanchy",
+        high: 25,
+        low: 22
+    },
+    {
+        name: "beth",
+        high: 21,
+        low: 18
+    },
+    {
+        name: "summer",
+        high: 17,
+        low: 14
+    },
+    {
+        name: "jerry",
+        high: 13,
+        low: 0
+    }
+]
 
 app.listen(PORT, function () {
     console.log("App listening on PORT: http://localhost:" + PORT);
@@ -43,19 +74,19 @@ app.post("/characters", function (req, res) {
     console.log(req.body);
     console.log(surveyScore);
 
-    if (surveyScore >= 30) {
+    if (characterSelect[0].high >= surveyScore  && surveyScore >= characterSelect[0].low) {
         res.sendFile(path.join(__dirname, "/public/morty.html"));
     }
-    else if (surveyScore >= 26) {
+    else if (characterSelect[1].high >= surveyScore  && surveyScore >= characterSelect[1].low) {
         res.sendFile(path.join(__dirname, "/public/birdperson.html"));
     }
-    else if (surveyScore >= 22) {
+    else if (characterSelect[2].high >= surveyScore  && surveyScore >= characterSelect[2].low) {
         res.sendFile(path.join(__dirname, "/public/squanchy.html"));
     }
-    else if (surveyScore >= 18) {
+    else if (characterSelect[3].high >= surveyScore  && surveyScore >= characterSelect[3].low) {
         res.sendFile(path.join(__dirname, "/public/beth.html"));
     }
-    else if (surveyScore >= 14) {
+    else if (characterSelect[4].high >= surveyScore  && surveyScore >= characterSelect[4].low) {
         res.sendFile(path.join(__dirname, "/public/summer.html"));
     }
     else {
@@ -64,3 +95,21 @@ app.post("/characters", function (req, res) {
 
     surveryResults = [];
 });
+
+app.get("/api/characters", function(req, res) {
+    return res.json(characterSelect);
+  });
+
+  app.get("/api/characters/:character", function(req, res) {
+    var chosen = req.params.character;
+  
+    console.log(chosen);
+  
+    for (var i = 0; i < characterSelect.length; i++) {
+      if (chosen === characterSelect[i].name) {
+        return res.json(characterSelect[i]);
+      }
+    }
+  
+    return res.json(false);
+  });
