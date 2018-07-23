@@ -7,6 +7,8 @@
     <title>RickandMortyQuiz!</title>
 
     <link rel="stylesheet" href="homestyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
 </head>
 <body>
     
@@ -15,12 +17,15 @@
 
         <div class="title">Rick and Morty Quiz!</div>
 
-        <div class="header">Are you a Rick? A Morty? A Summer? A Beth? A Jerry? A Birdperson? or maybe a Squanch?</div>
+        <div class="header">What character are you?</div>
+
+        <div class="left"></div>
+        <div class="right"></div>
 
         <div class="quizform">
 
-            <form action="">
-                <p>What if your favorite food from Rick and Morty?</p>
+            <form action="http://localhost:3000/characters" method="POST">
+                <p>What is your favorite food from Rick and Morty?</p>
                 <select name="one" id="">
 
                     <option value="2">Eyeholes</option>
@@ -104,7 +109,9 @@
                     <option value="2">Fart</option>
 
                 </select>
-
+                <br>
+                <br>
+                <button type="submit" >Submit!</button>
             </form>
 
         </div>

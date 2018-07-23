@@ -1,27 +1,80 @@
+body {
+    background: url(portal.gif);
+    background-size: cover;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 30px;
+    grid-template-columns: 20% 30% 30% 20%;
+    grid-gap: 10px;
 }
 
 .title {
-    grid-area: 1 / 1 / span 1 / span 4;
-    text-align: center;
-}
-
-.header {
-    grid-area: 2 / 1 / span 1 / span 4;
-    text-align: center;
-}
-
-.quizform {
-    grid-area: 3 / 1 / span 1 / span 4;
+    grid-area: 1 / 2 / span 1 / span 2;
     text-align: center;
     border: 4px;
     border-style: outset;
     border-radius: 4px;
     border-color: #325e2d;
     background-color: #4cb9cd;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.header {
+    grid-area: 2 / 2 / span 1 / span 2;
+    text-align: center;
+    border: 4px;
+    border-style: outset;
+    border-radius: 4px;
+    border-color: #325e2d;
+    background-color: #4cb9cd;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.quizform {
+    grid-area: 3 / 2 / span 1 / span 2;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 21px;
+    font-weight: bold;
+    
     
 }
 
+.left {
+    grid-area: 1 / 1 /span 3 / span 1;
+}
+
+.right {
+    grid-area: 1 / 4 /span 3 / span 1;
+}
+
+p {
+    border: 4px;
+    border-style: outset;
+    border-radius: 4px;
+    border-color: #325e2d;
+     background-color: #4cb9cd;
+}
+
+select {
+    border: 4px;
+    border-style: outset;
+    border-radius: 4px;
+    border-color: #325e2d;
+    background-color: #4cb9cd;
+    font-family: 'Coda Caption', sans-serif;
+}
+
+button {
+    border: 4px;
+    border-style: outset;
+    border-radius: 4px;
+    border-color: #325e2d;
+    background-color: #4cb9cd;
+    font-family: 'Coda Caption', sans-serif;
+}
