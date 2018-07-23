@@ -82,3 +82,7 @@ button {
     background-color: #4cb9cd;
     font-family: 'Coda Caption', sans-serif;
 }
+
+#rickButton {
+    display: none;
+}

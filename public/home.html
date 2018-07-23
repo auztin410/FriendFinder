@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,13 @@
     <link rel="stylesheet" href="homestyle.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
-    
+
+
     <div class="grid-container">
 
         <div class="title">Rick and Morty Quiz!</div>
@@ -24,7 +28,7 @@
 
         <div class="quizform">
 
-            
+
             <form action="http://localhost:3000/characters" method="POST">
                 <p>What is your favorite food from Rick and Morty?</p>
                 <select name="one" id="">
@@ -33,7 +37,7 @@
                     <option value="1">Szechuan Chicken Nuggets</option>
                     <option value="3">Little Bits</option>
                     <option value="4">Strawberry Smiggles</option>
-                    
+
 
                 </select>
 
@@ -112,11 +116,29 @@
                 </select>
                 <br>
                 <br>
-                <button type="submit" >Submit!</button>
+                <button type="submit">Submit!</button>
+                <br>
+                <br>
+                
             </form>
+
+            
+            <a href="/therickestrick"><button id="rickButton">Can this thing order drinks?</button></a>
+            
+           
 
         </div>
 
     </div>
 </body>
+
+<script>
+
+    $(function () {
+        setTimeout(function () {
+            $('#rickButton').show();
+        }, 60000);
+    });
+</script>
+
 </html>

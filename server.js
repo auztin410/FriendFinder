@@ -52,7 +52,12 @@ app.listen(PORT, function () {
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "/public/home.html"));
-})
+});
+
+app.get("/therickestrick", function(req, res){
+
+    res.sendFile(path.join(__dirname, "/public/rick.html"));
+  });
 
 app.post("/characters", function (req, res) {
 
@@ -113,3 +118,5 @@ app.get("/api/characters", function(req, res) {
   
     return res.json(false);
   });
+
+
