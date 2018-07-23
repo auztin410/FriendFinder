@@ -1,5 +1,5 @@
-body {
-    background: url(background.jpg);
+body{
+    background: url(stars.png);
     background-size: cover;
 }
 
@@ -44,9 +44,10 @@ body {
     background: url(portal.gif);
     background-size: contain;
     background-repeat: no-repeat;
-    
-    
+    background-position: center;
+    background-attachment: fixed;
 }
+
 
 .left {
     grid-area: 1 / 1 /span 3 / span 1;
